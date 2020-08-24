@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .hard-table {
+            width: 100%; 
+            border: blue solid 1px; 
+            border-collapse: collapse; 
+            border-spacing: 0; 
+            text-align: center;  
+        }
+        .hard-table__head {
+            background-color: #888888; 
+            color: #ffffff;
+            padding: 5px;
+        }
+        .hard-table__data {
+            border: blue solid 1px; 
+            padding: 5px;  
+        }
+        .hard-table__data_text-align_left {
+            text-align: left;
+        }
+        .hard-table__data_text-align_right {
+            text-align: right;
+        }
+        .emblem {
+            border-spacing: 0;
+            margin: 3% auto 0;
+        }
+        .emblem__cells_height {
+            height: 28px;
+        }
+        .emblem__cells_width {
+            width: 28px;
+        }
+        .emblem__cells_bg-color1 {
+            background-color: #ff0000;
+        }
+        .emblem__cells_bg-color2 {
+            background-color: #7fff00;
+        }
+        .stars {
+            border-spacing: 0;
+            margin: 3% auto 0;
+        }
+        .stars__cells_height {
+            height: 20px;
+        }
+        .stars__cells_width {
+            width: 20px;
+        }
+        .stars__cells_side-bg-color1 {
+            background-color: #ff1493;
+        }
+        .stars__cells_side-bg-color2 {
+            background-color: #ee82ee;
+        }
+        .stars__cells_side-bg-color3 {
+            background-color: #ff69b4;
+        }
+        .stars__cells_side-bg-color4 {
+            background-color: #ffb6c1;
+        }
+        .stars__cells_mid-bg-color1 {
+            background-color: #228022;
+        }
+        .stars__cells_mid-bg-color2 {
+            background-color: #3cb371;
+        }
+        .stars__cells_mid-bg-color3 {
+            background-color: #32cd32;
+        }
+        .stars__cells_mid-bg-color4 {
+            background-color: #00ff00; 
+        }
+        .tree {
+            background-color: black;
+            border-spacing: 0;
+            margin: 3% auto 0;
+        }
+        .tree__cells_height {
+            height: 31px;
+        }
+        .tree__cells_width {
+            width: 27px;
+        }
+        .tree__cells_leaves-bg-color1 {
+            background-color: #008000;
+        }
+        .tree__cells_leaves-bg-color2 {
+            background-color: #2e8b57;
+        }
+        .tree__cells_leaves-bg-color3 {
+            background-color: #3cb371;
+        }
+        .tree__cells_leaves-bg-color4 {
+            background-color: #32cd32;
+        }
+        .tree__cells_trunk-bg-color1 {
+            background-color: #8b4513;
+        }
+        .tree__cells_trunk-bg-color2 {
+            background-color: #b8860b;
+        }
+    </style>
+</head>
+<body>
+    
+    <h1>Пример сложной таблицы</h1>
+
+    <table class="hard-table">
+        <tr>
+            <th class="hard-table__head">Название 1</th>
+            <th class="hard-table__head">Название 2</th>
+            <th class="hard-table__head">Ещё название</th>
+            <th class="hard-table__head">Куча элементов</th>
+            <th class="hard-table__head">Список 1</th>
+            <th class="hard-table__head">Список 2</th>
+        </tr>
+        <tr>
+            <td rowspan="11" class="hard-table__data">JMPC</td>
+            <td rowspan="5" class="hard-table__data hard-table__data_text-align_left">CST</td>
+            <td rowspan="3" class="hard-table__data hard-table__data_text-align_left">CT</td>
+            <td class="hard-table__data hard-table__data_text-align_left">ADS</td>
+            <td class="hard-table__data">1</td>
+            <td class="hard-table__data">10</td>
+        </tr>
+        <tr>
+            <td class="hard-table__data hard-table__data_text-align_left">BTO</td>
+            <td class="hard-table__data">2</td>
+            <td class="hard-table__data">15</td>
+        </tr>
+        <tr>
+            <td class="hard-table__data hard-table__data_text-align_left">CSI</td>
+            <td class="hard-table__data">3</td>
+            <td class="hard-table__data">16</td>
+        </tr>
+        <tr>
+            <td rowspan="2" class="hard-table__data">VCT</td>
+            <td class="hard-table__data hard-table__data_text-align_left">ADS</td>
+            <td class="hard-table__data">4</td>
+            <td class="hard-table__data">10</td>
+        </tr>
+        <tr>
+            <td class="hard-table__data hard-table__data_text-align_left">BTO</td>
+            <td class="hard-table__data">5</td>
+            <td class="hard-table__data">15</td>
+        </tr>
+        <tr>
+            <td colspan="3" class="hard-table__data hard-table__data_text-align_right">Sub Total</td>
+            <td class="hard-table__data">6</td>
+            <td class="hard-table__data">15</td>
+        </tr>
+        <tr>
+            <td rowspan="4" class="hard-table__data">CST</td>
+            <td rowspan="3" class="hard-table__data hard-table__data_text-align_left">CT</td>
+            <td class="hard-table__data hard-table__data_text-align_left">ADS</td>
+            <td class="hard-table__data">7</td>
+            <td class="hard-table__data">10</td>
+        </tr>
+        <tr>
+            <td class="hard-table__data hard-table__data_text-align_left">BTO</td>
+            <td class="hard-table__data">8</td>
+            <td class="hard-table__data">15</td>
+        </tr>
+        <tr>
+            <td class="hard-table__data hard-table__data_text-align_left">CSI</td>
+            <td class="hard-table__data">9</td>
+            <td class="hard-table__data">16</td>
+        </tr>
+        <tr>
+            <td class="hard-table__data">VCT</td>
+            <td class="hard-table__data hard-table__data_text-align_left">ADS</td>
+            <td class="hard-table__data">10</td>
+            <td class="hard-table__data">10</td>
+        </tr>
+        <tr>
+            <td colspan="3" class="hard-table__data hard-table__data_text-align_right">Sub Total</td>
+            <td class="hard-table__data">11</td>
+            <td class="hard-table__data">15</td>
+        </tr>
+    </table>
+    
+    <table class="emblem">
+        <tr class="emblem__cells_height">
+            <td class="emblem__cells_width emblem__cells_bg-color1"></td>
+            <td class="emblem__cells_width"></td>
+            <td class="emblem__cells_width emblem__cells_bg-color1"></td>
+            <td class="emblem__cells_width emblem__cells_bg-color2"></td>
+            <td class="emblem__cells_width emblem__cells_bg-color1"></td>
+            <td class="emblem__cells_width"></td>
+            <td class="emblem__cells_width emblem__cells_bg-color1"></td>
+        </tr>
+        <tr class="emblem__cells_height">
+            <td class="emblem__cells_width"></td>
+            <td class="emblem__cells_width emblem__cells_bg-color1"></td>
+            <td class="emblem__cells_width emblem__cells_bg-color2"></td>
+            <td class="emblem__cells_width"></td>
+            <td class="emblem__cells_width emblem__cells_bg-color2"></td>
+            <td class="emblem__cells_width emblem__cells_bg-color1"></td>
+            <td class="emblem__cells_width"></td>
+        </tr>
+        <tr class="emblem__cells_height">
+            <td class="emblem__cells_width emblem__cells_bg-color1"></td>
+            <td class="emblem__cells_width emblem__cells_bg-color2"></td>
+            <td class="emblem__cells_width"></td>
+            <td class="emblem__cells_width"></td>
+            <td class="emblem__cells_width"></td>
+            <td class="emblem__cells_width emblem__cells_bg-color2"></td>
+            <td class="emblem__cells_width emblem__cells_bg-color1"></td>
+        </tr>
+        <tr class="emblem__cells_height">
+            <td class="emblem__cells_width emblem__cells_bg-color2"></td>
+            <td class="emblem__cells_width"></td>
+            <td class="emblem__cells_width"></td>
+            <td class="emblem__cells_width emblem__cells_bg-color1"></td>
+            <td class="emblem__cells_width"></td>
+            <td class="emblem__cells_width"></td>
+            <td class="emblem__cells_width emblem__cells_bg-color2"></td>
+        </tr>
+        <tr class="emblem__cells_height">
+            <td class="emblem__cells_width emblem__cells_bg-color1"></td>
+            <td class="emblem__cells_width emblem__cells_bg-color2"></td>
+            <td class="emblem__cells_width"></td>
+            <td class="emblem__cells_width"></td>
+            <td class="emblem__cells_width"></td>
+            <td class="emblem__cells_width emblem__cells_bg-color2"></td>
+            <td class="emblem__cells_width emblem__cells_bg-color1"></td>
+        </tr>
+        <tr class="emblem__cells_height">
+            <td class="emblem__cells_width"></td>
+            <td class="emblem__cells_width emblem__cells_bg-color1"></td>
+            <td class="emblem__cells_width emblem__cells_bg-color2"></td>
+            <td class="emblem__cells_width"></td>
+            <td class="emblem__cells_width emblem__cells_bg-color2"></td>
+            <td class="emblem__cells_width emblem__cells_bg-color1"></td>
+            <td class="emblem__cells_width"></td>
+        </tr>
+        <tr class="emblem__cells_height">
+            <td class="emblem__cells_width emblem__cells_bg-color1"></td>
+            <td class="emblem__cells_width"></td>
+            <td class="emblem__cells_width emblem__cells_bg-color1"></td>
+            <td class="emblem__cells_width emblem__cells_bg-color2"></td>
+            <td class="emblem__cells_width emblem__cells_bg-color1"></td>
+            <td class="emblem__cells_width"></td>
+            <td class="emblem__cells_width emblem__cells_bg-color1"></td>
+        </tr>
+    </table>
+
+    <table class="stars">
+        <tr class="stars__cells_height">
+            <td class="stars__cells_width"></td>
+            <td class="stars__cells_width"></td>
+            <td class="stars__cells_width"></td>
+            <td class="stars__cells_width stars__cells_side-bg-color1"></td>
+            <td class="stars__cells_width"></td>
+            <td class="stars__cells_width"></td>
+            <td class="stars__cells_width"></td>
+            <td class="stars__cells_width"></td>
+            <td class="stars__cells_width"></td>
+            <td class="stars__cells_width"></td>
+            <td class="stars__cells_width"></td>
+            <td class="stars__cells_width stars__cells_mid-bg-color1"></td>
+            <td class="stars__cells_width"></td>
+            <td class="stars__cells_width"></td>
+            <td class="stars__cells_width"></td>
+            <td class="stars__cells_width"></td>
+            <td class="stars__cells_width"></td>
+            <td class="stars__cells_width"></td>
+            <td class="stars__cells_width"></td>
+            <td class="stars__cells_width stars__cells_side-bg-color1"></td>
+            <td class="stars__cells_width"></td>
+            <td class="stars__cells_width"></td>
+            <td class="stars__cells_width"></td>
+        </tr>
+        <tr class="stars__cells_height">
+            <td class="stars__cells_width"></td>
+            <td class="stars__cells_width"></td>
+            <td class="stars__cells_width stars__cells_side-bg-color1"></td>
+            <td class="stars__cells_width stars__cells_side-bg-color2"></td>
+            <td class="stars__cells_width stars__cells_side-bg-color1"></td>
+            <td class="stars__cells_width"></td>
+            <td class="stars__cells_width"></td>
+            <td class="stars__cells_width"></td>
+            <td class="stars__cells_width"></td>
+            <td class="stars__cells_width"></td>
+            <td class="stars__cells_width stars__cells_mid-bg-color1"></td>
+            <td class="stars__cells_width stars__cells_mid-bg-color2"></td>
+            <td class="stars__cells_width stars__cells_mid-bg-color1"></td>
+            <td class="stars__cells_width"></td>
+            <td class="stars__cells_width"></td>
+            <td class="stars__cells_width"></td>
+            <td class="stars__cells_width"></td>
+            <td class="stars__cells_width"></td>
+            <td class="stars__cells_width stars__cells_side-bg-color1"></td>
+            <td class="stars__cells_width stars__cells_side-bg-color2"></td>
+            <td class="stars__cells_width stars__cells_side-bg-color1"></td>
+            <td class="stars__cells_width"></td>
+            <td class="stars__cells_width"></td>
+        </tr>
+        <tr class="stars__cells_height">
+            <td class="stars__cells_width"></td>
+            <td class="stars__cells_width stars__cells_side-bg-color1"></td>
+            <td class="stars__cells_width stars__cells_side-bg-color2"></td>
+            <td class="stars__cells_width stars__cells_side-bg-color3"></td>
+            <td class="stars__cells_width stars__cells_side-bg-color2"></td>
+            <td class="stars__cells_width stars__cells_side-bg-color1"></td>
+            <td class="stars__cells_width"></td>
+            <td class="stars__cells_width"></td>
+            <td class="stars__cells_width"></td>
+            <td class="stars__cells_width stars__cells_mid-bg-color1"></td>
+            <td class="stars__cells_width stars__cells_mid-bg-color2"></td>
+            <td class="stars__cells_width stars__cells_mid-bg-color3"></td>
+            <td class="stars__cells_width stars__cells_mid-bg-color2"></td>
+            <td class="stars__cells_width stars__cells_mid-bg-color1"></td>
+            <td class="stars__cells_width"></td>
+            <td class="stars__cells_width"></td>
+            <td class="stars__cells_width"></td>
+            <td class="stars__cells_width stars__cells_side-bg-color1"></td>
+            <td class="stars__cells_width stars__cells_side-bg-color2"></td>
+            <td class="stars__cells_width stars__cells_side-bg-color3"></td>
+            <td class="stars__cells_width stars__cells_side-bg-color2"></td>
+            <td class="stars__cells_width stars__cells_side-bg-color1"></td>
+            <td class="stars__cells_width"></td>
+        </tr>
+        <tr class="stars__cells_height">
+            <td class="stars__cells_width stars__cells_side-bg-color1"></td>
+            <td class="stars__cells_width stars__cells_side-bg-color2"></td>
+            <td class="stars__cells_width stars__cells_side-bg-color3"></td>
+            <td class="stars__cells_width stars__cells_side-bg-color4"></td>
+            <td class="stars__cells_width stars__cells_side-bg-color3"></td>
+            <td class="stars__cells_width stars__cells_side-bg-color2"></td>
+            <td class="stars__cells_width stars__cells_side-bg-color1"></td>
+            <td class="stars__cells_width"></td>
+            <td class="stars__cells_width stars__cells_mid-bg-color1"></td>
+            <td class="stars__cells_width stars__cells_mid-bg-color2"></td>
+            <td class="stars__cells_width stars__cells_mid-bg-color3"></td>
+            <td class="stars__cells_width stars__cells_mid-bg-color4"></td>
+            <td class="stars__cells_width stars__cells_mid-bg-color3"></td>
+            <td class="stars__cells_width stars__cells_mid-bg-color2"></td>
+            <td class="stars__cells_width stars__cells_mid-bg-color1"></td>
+            <td class="stars__cells_width"></td>
+            <td class="stars__cells_width stars__cells_side-bg-color1"></td>
+            <td class="stars__cells_width stars__cells_side-bg-color2"></td>
+            <td class="stars__cells_width stars__cells_side-bg-color3"></td>
+            <td class="stars__cells_width stars__cells_side-bg-color4"></td>
+            <td class="stars__cells_width stars__cells_side-bg-color3"></td>
+            <td class="stars__cells_width stars__cells_side-bg-color2"></td>
+            <td class="stars__cells_width stars__cells_side-bg-color1"></td>
+        </tr>
+        <tr class="stars__cells_height">
+            <td class="stars__cells_width"></td>
+            <td class="stars__cells_width stars__cells_side-bg-color1"></td>
+            <td class="stars__cells_width stars__cells_side-bg-color2"></td>
+            <td class="stars__cells_width stars__cells_side-bg-color3"></td>
+            <td class="stars__cells_width stars__cells_side-bg-color2"></td>
+            <td class="stars__cells_width stars__cells_side-bg-color1"></td>
+            <td class="stars__cells_width"></td>
+            <td class="stars__cells_width"></td>
+            <td class="stars__cells_width"></td>
+            <td class="stars__cells_width stars__cells_mid-bg-color1"></td>
+            <td class="stars__cells_width stars__cells_mid-bg-color2"></td>
+            <td class="stars__cells_width stars__cells_mid-bg-color3"></td>
+            <td class="stars__cells_width stars__cells_mid-bg-color2"></td>
+            <td class="stars__cells_width stars__cells_mid-bg-color1"></td>
+            <td class="stars__cells_width"></td>
+            <td class="stars__cells_width"></td>
+            <td class="stars__cells_width"></td>
+            <td class="stars__cells_width stars__cells_side-bg-color1"></td>
+            <td class="stars__cells_width stars__cells_side-bg-color2"></td>
+            <td class="stars__cells_width stars__cells_side-bg-color3"></td>
+            <td class="stars__cells_width stars__cells_side-bg-color2"></td>
+            <td class="stars__cells_width stars__cells_side-bg-color1"></td>
+            <td class="stars__cells_width"></td>
+        </tr>
+        <tr class="stars__cells_height">
+            <td class="stars__cells_width"></td>
+            <td class="stars__cells_width"></td>
+            <td class="stars__cells_width stars__cells_side-bg-color1"></td>
+            <td class="stars__cells_width stars__cells_side-bg-color2"></td>
+            <td class="stars__cells_width stars__cells_side-bg-color1"></td>
+            <td class="stars__cells_width"></td>
+            <td class="stars__cells_width"></td>
+            <td class="stars__cells_width"></td>
+            <td class="stars__cells_width"></td>
+            <td class="stars__cells_width"></td>
+            <td class="stars__cells_width stars__cells_mid-bg-color1"></td>
+            <td class="stars__cells_width stars__cells_mid-bg-color2"></td>
+            <td class="stars__cells_width stars__cells_mid-bg-color1"></td>
+            <td class="stars__cells_width"></td>
+            <td class="stars__cells_width"></td>
+            <td class="stars__cells_width"></td>
+            <td class="stars__cells_width"></td>
+            <td class="stars__cells_width"></td>
+            <td class="stars__cells_width stars__cells_side-bg-color1"></td>
+            <td class="stars__cells_width stars__cells_side-bg-color2"></td>
+            <td class="stars__cells_width stars__cells_side-bg-color1"></td>
+            <td class="stars__cells_width"></td>
+            <td class="stars__cells_width"></td>
+        </tr>
+        <tr class="stars__cells_height">
+            <td class="stars__cells_width"></td>
+            <td class="stars__cells_width"></td>
+            <td class="stars__cells_width"></td>
+            <td class="stars__cells_width stars__cells_side-bg-color1"></td>
+            <td class="stars__cells_width"></td>
+            <td class="stars__cells_width"></td>
+            <td class="stars__cells_width"></td>
+            <td class="stars__cells_width"></td>
+            <td class="stars__cells_width"></td>
+            <td class="stars__cells_width"></td>
+            <td class="stars__cells_width"></td>
+            <td class="stars__cells_width stars__cells_mid-bg-color1"></td>
+            <td class="stars__cells_width"></td>
+            <td class="stars__cells_width"></td>
+            <td class="stars__cells_width"></td>
+            <td class="stars__cells_width"></td>
+            <td class="stars__cells_width"></td>
+            <td class="stars__cells_width"></td>
+            <td class="stars__cells_width"></td>
+            <td class="stars__cells_width stars__cells_side-bg-color1"></td>
+            <td class="stars__cells_width"></td>
+            <td class="stars__cells_width"></td>
+            <td class="stars__cells_width"></td>
+        </tr>
+    </table>
+
+    <table class="tree">
+        <tr class="tree__cells_height">
+            <td class="tree__cells_width"></td>
+            <td class="tree__cells_width"></td>
+            <td class="tree__cells_width"></td>
+            <td class="tree__cells_width"></td>
+            <td class="tree__cells_width"></td>
+            <td class="tree__cells_width tree__cells_leaves-bg-color1"></td>
+            <td class="tree__cells_width"></td>
+            <td class="tree__cells_width"></td>
+            <td class="tree__cells_width"></td>
+            <td class="tree__cells_width"></td>
+            <td class="tree__cells_width"></td>
+        </tr>
+        <tr class="tree__cells_height">
+            <td class="tree__cells_width"></td>
+            <td class="tree__cells_width"></td>
+            <td class="tree__cells_width"></td>
+            <td class="tree__cells_width"></td>
+            <td class="tree__cells_width tree__cells_leaves-bg-color2"></td>
+            <td class="tree__cells_width tree__cells_leaves-bg-color2"></td>
+            <td class="tree__cells_width tree__cells_leaves-bg-color2"></td>
+            <td class="tree__cells_width"></td>
+            <td class="tree__cells_width"></td>
+            <td class="tree__cells_width"></td>
+            <td class="tree__cells_width"></td>
+        </tr>
+        <tr class="tree__cells_height">
+            <td class="tree__cells_width"></td>
+            <td class="tree__cells_width"></td>
+            <td class="tree__cells_width"></td>
+            <td class="tree__cells_width tree__cells_leaves-bg-color3"></td>
+            <td class="tree__cells_width tree__cells_leaves-bg-color3"></td>
+            <td class="tree__cells_width tree__cells_leaves-bg-color3"></td>
+            <td class="tree__cells_width tree__cells_leaves-bg-color3"></td>
+            <td class="tree__cells_width tree__cells_leaves-bg-color3"></td>
+            <td class="tree__cells_width"></td>
+            <td class="tree__cells_width"></td>
+            <td class="tree__cells_width"></td>
+        </tr>
+        <tr class="tree__cells_height">
+            <td class="tree__cells_width"></td>
+            <td class="tree__cells_width"></td>
+            <td class="tree__cells_width tree__cells_leaves-bg-color4"></td>
+            <td class="tree__cells_width tree__cells_leaves-bg-color4"></td>
+            <td class="tree__cells_width tree__cells_leaves-bg-color4"></td>
+            <td class="tree__cells_width tree__cells_leaves-bg-color4"></td>
+            <td class="tree__cells_width tree__cells_leaves-bg-color4"></td>
+            <td class="tree__cells_width tree__cells_leaves-bg-color4"></td>
+            <td class="tree__cells_width tree__cells_leaves-bg-color4"></td>
+            <td class="tree__cells_width"></td>
+            <td class="tree__cells_width"></td>
+        </tr>
+        <tr class="tree__cells_height">
+            <td class="tree__cells_width"></td>
+            <td class="tree__cells_width"></td>
+            <td class="tree__cells_width"></td>
+            <td class="tree__cells_width"></td>
+            <td class="tree__cells_width tree__cells_leaves-bg-color1"></td>
+            <td class="tree__cells_width tree__cells_leaves-bg-color1"></td>
+            <td class="tree__cells_width tree__cells_leaves-bg-color1"></td>
+            <td class="tree__cells_width"></td>
+            <td class="tree__cells_width"></td>
+            <td class="tree__cells_width"></td>
+            <td class="tree__cells_width"></td>
+        </tr>
+        <tr class="tree__cells_height">
+            <td class="tree__cells_width"></td>
+            <td class="tree__cells_width"></td>
+            <td class="tree__cells_width"></td>
+            <td class="tree__cells_width tree__cells_leaves-bg-color2"></td>
+            <td class="tree__cells_width tree__cells_leaves-bg-color2"></td>
+            <td class="tree__cells_width tree__cells_leaves-bg-color2"></td>
+            <td class="tree__cells_width tree__cells_leaves-bg-color2"></td>
+            <td class="tree__cells_width tree__cells_leaves-bg-color2"></td>
+            <td class="tree__cells_width"></td>
+            <td class="tree__cells_width"></td>
+            <td class="tree__cells_width"></td>
+        </tr>
+        <tr class="tree__cells_height">
+            <td class="tree__cells_width"></td>
+            <td class="tree__cells_width"></td>
+            <td class="tree__cells_width tree__cells_leaves-bg-color3"></td>
+            <td class="tree__cells_width tree__cells_leaves-bg-color3"></td>
+            <td class="tree__cells_width tree__cells_leaves-bg-color3"></td>
+            <td class="tree__cells_width tree__cells_leaves-bg-color3"></td>
+            <td class="tree__cells_width tree__cells_leaves-bg-color3"></td>
+            <td class="tree__cells_width tree__cells_leaves-bg-color3"></td>
+            <td class="tree__cells_width tree__cells_leaves-bg-color3"></td>
+            <td class="tree__cells_width"></td>
+            <td class="tree__cells_width"></td>
+        </tr>
+        <tr class="tree__cells_height">
+            <td class="tree__cells_width"></td>
+            <td class="tree__cells_width tree__cells_leaves-bg-color4"></td>
+            <td class="tree__cells_width tree__cells_leaves-bg-color4"></td>
+            <td class="tree__cells_width tree__cells_leaves-bg-color4"></td>
+            <td class="tree__cells_width tree__cells_leaves-bg-color4"></td>
+            <td class="tree__cells_width tree__cells_leaves-bg-color4"></td>
+            <td class="tree__cells_width tree__cells_leaves-bg-color4"></td>
+            <td class="tree__cells_width tree__cells_leaves-bg-color4"></td>
+            <td class="tree__cells_width tree__cells_leaves-bg-color4"></td>
+            <td class="tree__cells_width tree__cells_leaves-bg-color4"></td>
+            <td class="tree__cells_width"></td>
+        </tr>
+        <tr class="tree__cells_height">
+            <td class="tree__cells_width"></td>
+            <td class="tree__cells_width"></td>
+            <td class="tree__cells_width"></td>
+            <td class="tree__cells_width tree__cells_leaves-bg-color1"></td>
+            <td class="tree__cells_width tree__cells_leaves-bg-color1"></td>
+            <td class="tree__cells_width tree__cells_leaves-bg-color1"></td>
+            <td class="tree__cells_width tree__cells_leaves-bg-color1"></td>
+            <td class="tree__cells_width tree__cells_leaves-bg-color1"></td>
+            <td class="tree__cells_width"></td>
+            <td class="tree__cells_width"></td>
+            <td class="tree__cells_width"></td>
+        </tr>
+        <tr class="tree__cells_height">
+            <td class="tree__cells_width"></td>
+            <td class="tree__cells_width"></td>
+            <td class="tree__cells_width tree__cells_leaves-bg-color2"></td>
+            <td class="tree__cells_width tree__cells_leaves-bg-color2"></td>
+            <td class="tree__cells_width tree__cells_leaves-bg-color2"></td>
+            <td class="tree__cells_width tree__cells_leaves-bg-color2"></td>
+            <td class="tree__cells_width tree__cells_leaves-bg-color2"></td>
+            <td class="tree__cells_width tree__cells_leaves-bg-color2"></td>
+            <td class="tree__cells_width tree__cells_leaves-bg-color2"></td>
+            <td class="tree__cells_width"></td>
+            <td class="tree__cells_width"></td>
+        </tr>
+        <tr class="tree__cells_height">
+            <td class="tree__cells_width"></td>
+            <td class="tree__cells_width tree__cells_leaves-bg-color3"></td>
+            <td class="tree__cells_width tree__cells_leaves-bg-color3"></td>
+            <td class="tree__cells_width tree__cells_leaves-bg-color3"></td>
+            <td class="tree__cells_width tree__cells_leaves-bg-color3"></td>
+            <td class="tree__cells_width tree__cells_leaves-bg-color3"></td>
+            <td class="tree__cells_width tree__cells_leaves-bg-color3"></td>
+            <td class="tree__cells_width tree__cells_leaves-bg-color3"></td>
+            <td class="tree__cells_width tree__cells_leaves-bg-color3"></td>
+            <td class="tree__cells_width tree__cells_leaves-bg-color3"></td>
+            <td class="tree__cells_width"></td>
+        </tr>
+        <tr class="tree__cells_height">
+            <td class="tree__cells_width tree__cells_leaves-bg-color4"></td>
+            <td class="tree__cells_width tree__cells_leaves-bg-color4"></td>
+            <td class="tree__cells_width tree__cells_leaves-bg-color4"></td>
+            <td class="tree__cells_width tree__cells_leaves-bg-color4"></td>
+            <td class="tree__cells_width tree__cells_leaves-bg-color4"></td>
+            <td class="tree__cells_width tree__cells_leaves-bg-color4"></td>
+            <td class="tree__cells_width tree__cells_leaves-bg-color4"></td>
+            <td class="tree__cells_width tree__cells_leaves-bg-color4"></td>
+            <td class="tree__cells_width tree__cells_leaves-bg-color4"></td>
+            <td class="tree__cells_width tree__cells_leaves-bg-color4"></td>
+            <td class="tree__cells_width tree__cells_leaves-bg-color4"></td>
+        </tr>
+        <tr class="tree__cells_height">
+            <td class="tree__cells_width"></td>
+            <td class="tree__cells_width"></td>
+            <td class="tree__cells_width"></td>
+            <td class="tree__cells_width"></td>
+            <td class="tree__cells_width tree__cells_trunk-bg-color1"></td>
+            <td class="tree__cells_width tree__cells_trunk-bg-color2"></td>
+            <td class="tree__cells_width tree__cells_trunk-bg-color1"></td>
+            <td class="tree__cells_width"></td>
+            <td class="tree__cells_width"></td>
+            <td class="tree__cells_width"></td>
+            <td class="tree__cells_width"></td>
+        </tr>
+        <tr class="tree__cells_height">
+            <td class="tree__cells_width"></td>
+            <td class="tree__cells_width"></td>
+            <td class="tree__cells_width"></td>
+            <td class="tree__cells_width"></td>
+            <td class="tree__cells_width tree__cells_trunk-bg-color1"></td>
+            <td class="tree__cells_width tree__cells_trunk-bg-color2"></td>
+            <td class="tree__cells_width tree__cells_trunk-bg-color1"></td>
+            <td class="tree__cells_width"></td>
+            <td class="tree__cells_width"></td>
+            <td class="tree__cells_width"></td>
+            <td class="tree__cells_width"></td>
+        </tr>
+        <tr class="tree__cells_height">
+            <td class="tree__cells_width"></td>
+            <td class="tree__cells_width"></td>
+            <td class="tree__cells_width"></td>
+            <td class="tree__cells_width"></td>
+            <td class="tree__cells_width tree__cells_trunk-bg-color1"></td>
+            <td class="tree__cells_width tree__cells_trunk-bg-color2"></td>
+            <td class="tree__cells_width tree__cells_trunk-bg-color1"></td>
+            <td class="tree__cells_width"></td>
+            <td class="tree__cells_width"></td>
+            <td class="tree__cells_width"></td>
+            <td class="tree__cells_width"></td>
+        </tr>
+        <tr class="tree__cells_height">
+            <td class="tree__cells_width"></td>
+            <td class="tree__cells_width"></td>
+            <td class="tree__cells_width"></td>
+            <td class="tree__cells_width"></td>
+            <td class="tree__cells_width tree__cells_trunk-bg-color1"></td>
+            <td class="tree__cells_width tree__cells_trunk-bg-color2"></td>
+            <td class="tree__cells_width tree__cells_trunk-bg-color1"></td>
+            <td class="tree__cells_width"></td>
+            <td class="tree__cells_width"></td>
+            <td class="tree__cells_width"></td>
+            <td class="tree__cells_width"></td>
+        </tr>
+    </table>
+
+</body>
+</html>

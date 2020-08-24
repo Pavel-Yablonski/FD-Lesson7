@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: cyan;
+        }
+        .content {
+            background-color: white;
+        }
+        .side-border_bg-pos_left {
+            background: url(imgs/border-side.gif) left repeat-y;  
+        }
+        .side-border_bg-pos_right {
+            background: url(imgs/border-side.gif) right repeat-y;  
+        }
+        .side-border_bg-pos_top {
+            background: url(imgs/border-side2.gif) top repeat-x;  
+        }
+        .side-border_bg-pos_bottom {
+            background: url(imgs/border-side2.gif) bottom repeat-x;  
+        }
+        .corner-border_bg-pos_top-left {
+            background: url(imgs/topleft_corner.gif) 0 0 no-repeat;
+        }
+        .corner-border_bg-pos_top-right {
+            background: url(imgs/topright_corner.gif) 100% 0 no-repeat;
+        }
+        .corner-border_bg-pos_bottom-left {
+            background: url(imgs/botleft_corner.gif) 0 100% no-repeat;
+        }
+        .corner-border_bg-pos_bottom-right {
+            background: url(imgs/botright_corner.gif) 100% 100% no-repeat;
+        }
+        .content__text_padding{
+            padding: 60px 80px 60px;
+        }
+        .cards-block {
+            padding: 20px; border: green solid 1px; 
+        }
+        .cards-blocl__cards {
+            width: 140px; height: 190px; display: inline-block; 
+            background: url(imgs/cards.png) no-repeat;
+        }
+        .cards-blocl__cards_bg-pos_card1 {
+            background-position: 0 92.35%;
+        }
+        .cards-blocl__cards_bg-pos_card2 {
+            background-position: 33.3% 84.6%;
+        }
+        .cards-blocl__cards_bg-pos_card3 {
+            background-position: 66.4% 76.9%;
+        }
+        .cards-blocl__cards_bg-pos_card4 {
+            background-position: 99.6% 69.2%;
+        }
+        .cards-blocl__cards_bg-pos_card5 {
+            background-position: 33.3% 61.5%;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="content">
+        <div class="side-border_bg-pos_left">
+            <div class="side-border_bg-pos_right">
+                <div class="side-border_bg-pos_top">
+                    <div class="side-border_bg-pos_bottom">
+                        <div class="corner-border_bg-pos_top-left">
+                            <div class="corner-border_bg-pos_top-right">
+                                <div class="corner-border_bg-pos_bottom-left">
+                                    <div class="corner-border_bg-pos_bottom-right">
+                                        <div class="content__text_padding">
+
+                                            <h1>Покер</h1>
+
+                                            <p>
+                                                По́кер (англ. poker) — карточная игра, цель которой — выиграть ставки, собрав как можно более высокую покерную комбинацию, 
+                                                используя 4 (старый классический вариант), или 5 карт, или вынудив всех соперников прекратить участвовать в игре. Игра идёт 
+                                                с полностью или частично закрытыми картами. Конкретные правила могут варьироваться в зависимости от разновидности покера. Обобщающими 
+                                                элементами всех разновидностей покера являются комбинации и наличие торговли в процессе игры.
+                                            </p>
+
+                                            <p>
+                                                Ввиду того, что игрок не знает карты своих противников, покер является игрой с неполной информацией, как и многие другие карточные игры, 
+                                                в отличие от, например, шахмат, в которых оба игрока видят положение всех фигур на доске.
+                                            </p>
+                                            
+                                            <div class="cards-block">
+
+                                                <div class="cards-blocl__cards cards-blocl__cards_bg-pos_card1"></div>
+                                                <div class="cards-blocl__cards cards-blocl__cards_bg-pos_card2"></div>
+                                                <div class="cards-blocl__cards cards-blocl__cards_bg-pos_card3"></div>
+                                                <div class="cards-blocl__cards cards-blocl__cards_bg-pos_card4"></div>
+                                                <div class="cards-blocl__cards cards-blocl__cards_bg-pos_card5"></div>
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

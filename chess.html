@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        background-color: cyan;
+    }
+    h1 {
+        text-align: center;
+    }
+    .chessboard {
+        margin: 0 auto;
+        border: black solid 2px;
+        background-color: white;
+        border-spacing: 0;
+        text-align: center;
+        font-weight: bold;
+    }
+    .chessboard__side-border_height {
+        height: 32px;
+    }
+    .chessboard__side-border_width {
+        width: 26px;
+    }
+    .chessboard__row_height {
+        height: 48px;
+    }
+    .chessboard__coll_width {
+        width: 48px;
+    }
+    .chessboard__space_bg-color {
+        background-color: rgba(0,0,0,0.5);;
+    }
+    .chessboard__space_border_left {
+        border-left: black solid 2px;
+    }
+    .chessboard__space_border_right {
+        border-right: black solid 2px;
+    }
+    .chessboard__space_border_top {
+        border-top: black solid 2px;
+    }
+    .chessboard__space_border_bottom {
+        border-bottom: black solid 2px;
+    }
+    .chessboard__space_bg-img {
+        background-image: url(imgs/chess.png);
+    }
+    .chessboard__space_bg-positon_rook-black {
+        background-position: 40% 0;
+    }
+    .chessboard__space_bg-positon_knight-black {
+        background-position: 80% 0;
+    }
+    .chessboard__space_bg-positon_bishop-black {
+        background-position: 60% 0;
+    }
+    .chessboard__space_bg-positon_king-black {
+        background-position: 20% 0;
+    }
+    .chessboard__space_bg-positon_pawn-black {
+        background-position: 100% 0;
+    }
+    .chessboard__space_bg-positon_rook-white {
+        background-position: 40% 100%;
+    }
+    .chessboard__space_bg-positon_knight-white {
+        background-position: 80% 100%;
+    }
+    .chessboard__space_bg-positon_bishop-white {
+        background-position: 60% 100%;
+    }
+    .chessboard__space_bg-positon_king-white {
+        background-position: 20% 100%;
+    }
+    .chessboard__space_bg-positon_queen-white {
+        background-position: 0 100%;
+    }
+    .chessboard__space_bg-positon_pawn-white {
+        background-position: 100% 100%;
+    }
+</style>
+<body>
+    
+    <h1>Шахматы</h1>
+
+    <table class="chessboard">
+        <tr class="chessboard__side-border_height">
+            <td></td>
+            <td class="chessboard__coll_width">a</td>
+            <td class="chessboard__coll_width">b</td>
+            <td class="chessboard__coll_width">c</td>
+            <td class="chessboard__coll_width">d</td>
+            <td class="chessboard__coll_width">e</td>
+            <td class="chessboard__coll_width">f</td>
+            <td class="chessboard__coll_width">g</td>
+            <td class="chessboard__coll_width">h</td>
+            <td></td>
+        </tr>
+        <tr class="chessboard__row_height">
+            <td class="chessboard__side-border_width">8</td>
+            <td class="chessboard__space_border_left chessboard__space_border_top chessboard__space_bg-img chessboard__space_bg-positon_rook-black"></td>
+            <td class="chessboard__space_bg-color chess chessboard__space_border_top chessboard__space_bg-img chessboard__space_bg-positon_knight-black"></td>
+            <td class="chessboard__space_border_top chessboard__space_bg-img chessboard__space_bg-positon_bishop-black"></td>
+            <td class="chessboard__space_bg-color chessboard__space_border_top chessboard__space_bg-img chessboard__space_bg-positon_king-black"></td>
+            <td class="chessboard__space_border_top chessboard__space_bg-img"></td>
+            <td class="chessboard__space_bg-color chessboard__space_border_top chessboard__space_bg-img chessboard__space_bg-positon_bishop-black"></td>
+            <td class="chessboard__space_border_top chessboard__space_bg-img chessboard__space_bg-positon_knight-black"></td>
+            <td class="chessboard__space_bg-color chessboard__space_border_right chessboard__space_border_top chessboard__space_bg-img chessboard__space_bg-positon_rook-black"></td>
+            <td class="chessboard__side-border_width">8</td>
+        </tr>
+        <tr class="chessboard__row_height">
+            <td>7</td>
+            <td class="chessboard__space_bg-color chessboard__space_border_left chessboard__space_bg-img chessboard__space_bg-positon_pawn-black"></td>
+            <td class="chessboard__space_bg-img chessboard__space_bg-positon_pawn-black"></td>
+            <td class="chessboard__space_bg-color chessboard__space_bg-img chessboard__space_bg-positon_pawn-black"></td>
+            <td class="chessboard__space_bg-img chessboard__space_bg-positon_pawn-black"></td>
+            <td class="chessboard__space_bg-color chessboard__space_bg-img chessboard__space_bg-positon_pawn-black"></td>
+            <td class="chessboard__space_bg-img chessboard__space_bg-positon_pawn-black"></td>
+            <td class="chessboard__space_bg-color chessboard__space_bg-img chessboard__space_bg-positon_pawn-black"></td>
+            <td class="chessboard__space_border_right chessboard__space_bg-img chessboard__space_bg-positon_pawn-black"></td>
+            <td>7</td>
+        </tr>
+        <tr class="chessboard__row_height">
+            <td>6</td>
+            <td class="chessboard__space_border_left"></td>
+            <td class="chessboard__space_bg-color"></td>
+            <td></td>
+            <td class="chessboard__space_bg-color"></td>
+            <td></td>
+            <td class="chessboard__space_bg-color"></td>
+            <td></td>
+            <td class="chessboard__space_bg-color chessboard__space_border_right"></td>
+            <td>6</td>
+        </tr>
+        <tr class="chessboard__row_height">
+            <td>5</td>
+            <td class="chessboard__space_bg-color chessboard__space_border_left"></td>
+            <td></td>
+            <td class="chessboard__space_bg-color"></td>
+            <td></td>
+            <td class="chessboard__space_bg-color"></td>
+            <td></td>
+            <td class="chessboard__space_bg-color"></td>
+            <td class="chessboard__space_border_right"></td>
+            <td>5</td>
+        </tr>
+        <tr class="chessboard__row_height">
+            <td>4</td>
+            <td class="chessboard__space_border_left"></td>
+            <td class="chessboard__space_bg-color"></td>
+            <td></td>
+            <td class="chessboard__space_bg-color"></td>
+            <td></td>
+            <td class="chessboard__space_bg-color"></td>
+            <td></td>
+            <td class="chessboard__space_bg-color chessboard__space_border_right"></td>
+            <td>4</td>
+        </tr>
+        <tr class="chessboard__row_height">
+            <td>3</td>
+            <td class="chessboard__space_bg-color chessboard__space_border_left"></td>
+            <td></td>
+            <td class="chessboard__space_bg-color"></td>
+            <td></td>
+            <td class="chessboard__space_bg-color"></td>
+            <td></td>
+            <td class="chessboard__space_bg-color"></td>
+            <td class="chessboard__space_border_right"></td>
+            <td>3</td>
+        </tr>
+        <tr class="chessboard__row_height">
+            <td>2</td>
+            <td class="chessboard__space_border_left chessboard__space_bg-img chessboard__space_bg-positon_pawn-white"></td>
+            <td class="chessboard__space_bg-color chessboard__space_bg-img chessboard__space_bg-positon_pawn-white"></td>
+            <td class="chessboard__space_bg-img chessboard__space_bg-positon_pawn-white"></td>
+            <td class="chessboard__space_bg-color chessboard__space_bg-img chessboard__space_bg-positon_pawn-white"></td>
+            <td class="chessboard__space_bg-img chessboard__space_bg-positon_pawn-white"></td>
+            <td class="chessboard__space_bg-color chessboard__space_bg-img chessboard__space_bg-positon_pawn-white"></td>
+            <td class="chessboard__space_bg-img chessboard__space_bg-positon_pawn-white"></td>
+            <td class="chessboard__space_bg-color chessboard__space_border_right chessboard__space_bg-img chessboard__space_bg-positon_pawn-white"></td>
+            <td>2</td>
+        </tr>
+        <tr class="chessboard__row_height"> 
+            <td>1</td>
+            <td class="chessboard__space_bg-color chessboard__space_border_left chessboard__space_border_bottom chessboard__space_bg-img chessboard__space_bg-positon_rook-white"></td>
+            <td class="chessboard__space_border_bottom chessboard__space_bg-img chessboard__space_bg-positon_knight-white"></td>
+            <td class="chessboard__space_bg-color chessboard__space_border_bottom chessboard__space_bg-img chessboard__space_bg-positon_bishop-white"></td>
+            <td class="chessboard__space_border_bottom chessboard__space_bg-img chessboard__space_bg-positon_king-white"></td>
+            <td class="chessboard__space_bg-color chessboard__space_border_bottom chessboard__space_bg-img chessboard__space_bg-positon_queen-white"></td>
+            <td class="chessboard__space_border_bottom chessboard__space_bg-img chessboard__space_bg-positon_bishop-white"></td>
+            <td class="chessboard__space_bg-color chessboard__space_border_bottom chessboard__space_bg-img chessboard__space_bg-positon_knight-white"></td>
+            <td class="chessboard__space_border_right chessboard__space_border_bottom chessboard__space_bg-img chessboard__space_bg-positon_rook-white"></td>
+            <td>1</td>
+        </tr>
+        <tr class="chessboard__side-border_height">
+            <td></td>
+            <td>a</td>
+            <td>b</td>
+            <td>c</td>
+            <td>d</td>
+            <td>e</td>
+            <td>f</td>
+            <td>g</td>
+            <td>h</td>
+            <td></td>
+        </tr>
+    </table>
+</body>
+</html>
